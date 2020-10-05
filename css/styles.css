@@ -4,31 +4,22 @@
   --dark: #383838;
   --dark-blue: #005499;
   --light-blue: #0088ED;
+  --hover-color: #D0EBFE;
 }
 
-/* Referencia todos os seletores */
 * { 
   margin: 0;
   padding: 0;
 }
 
-/* Para importar a font */
 html {
   font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background: #FFFFFF;
-  -webkit-font-smoothing: antialiased;
 }
 
 #banner {
   padding-top: 5rem;
   padding-bottom: calc(10rem - 4.5rem);
   background: url("../assets/img/bg-masthead.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -36,290 +27,197 @@ body {
 
 .banner-content {
   text-align: center;
-  padding-bottom: 50px;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin: 0 25% 0 25%;
 }
 
 .banner-content h1 {
-  padding-top: 40px;
   font-size: 60px;
   font-weight: 600;
   color: var(--white);
+  padding-top: 40px;
 }
 
 .banner-content a {
   text-decoration: none;
-  text-align: center;
+  color: var(--dark);
   font-size: 18px;
   font-weight: 700;
-  color: var(--dark);
   background: var(--white);
-  display: inline-block;
-  width: 326px;
-  height: 70px;
-  margin-top: 40px;
-  vertical-align: top;
+  width: 40%; 
   padding: 20px;
+  display: inline-block;
+  margin-top: 40px;
   box-sizing: border-box;
+  transition: background-color 400ms;
+}
+
+.banner-content a:hover {
+  background-color: var(--hover-color);
 }
 
 #categories {
   margin: 50px 100px 100px 100px;
-  height: auto;
 }
 
-#categories h2 {
-  font-weight: 600;
+.title h2 {
   font-size: 60px;
+  font-weight: 600;
   color: var(--dark);
 }
 
-#categories p {
+.title p {
   font-size: 18px;
   font-weight: 600;
   color: var(--dark);
-  margin-bottom: 30px;
 }
 
-.categories-content1-2 {
-  height: 460px;
+.categories-content h2 {
+  font-size: 60px;
+  font-weight: 600;
+  color: var(--white);
+  padding-left: 25px;
+}
+
+.categories-content p {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--white);
+  padding-left: 25px;
+}
+
+.categories1-2 {
   display: flex;
   justify-content: space-between;
+  margin-top: 50px;
+  height: 400px;
 }
 
-#categories .categories-content1-2 h2 {
-  color: var(--white);
-  margin: 30px 0 0 25px;
-}
-
-#categories .categories-content1-2 p {
-  color: var(--white);
-  margin-left: 25px;
-}
-
-.categories-content1-2 .categorie-nature {
+.categories1-2 .item:nth-child(1) {
   background: url(../assets/img/image01_nature.png);
-  object-fit: cover;
-  width: auto;
-  margin-bottom: 30px;
   flex-grow: 1;
 }
 
-.categories-content1-2 .categorie-daily {
+.categories1-2 .item:nth-child(2) {
   background: url(../assets/img/image02_daily.png);
-  width: auto;
-  object-fit: cover;
+  flex-grow: 2;
   margin-left: 30px;
-  margin-bottom: 30px;
-  flex-grow: 3;
 }
 
-#categories .categories-content3 h2 {
-  color: var(--white);
-  padding: 30px 0 0 25px;
+.categorie3 {
+  display: flex;
+  margin: 30px 0 30px 0;
+  height: 400px;
 }
 
-#categories .categories-content3 p {
-  color: var(--white);
-  margin-left: 25px;
+.categorie3 .item h2 {
+  padding-top: 140px;
 }
 
-.categories-content3 {
+.categorie3 .item {
   background: url(../assets/img/image03_together.png);
   width: 100%;
-  height: 460px;
-  object-fit: cover;
-  margin-bottom: 30px;
-  display: flex;
+  height: 400px;
   align-items: center;
 }
 
-.categories-content4-5 {
-  height: 460px;
+
+.categories4-5 {
   display: flex;
   justify-content: space-between;
+  height: 400px;
 }
 
-#categories .categories-content4-5 h2 {
-  color: var(--white);
-}
-
-#categories .categories-content4-5 p {
-  color: var(--white);
-  margin-left: 25px;
-}
-
-.categories-content4-5 .categorie-analysis h2 {
-  margin: 30px 25px 0 0;
-}
-
-.categories-content4-5 .categorie-analysis p {
-  margin-right: 25px;
-}
-
-.categories-content4-5 .categorie-analysis {
+.categories4-5 .item:nth-child(1) {
   background: url(../assets/img/image04_analysis.png);
-  width: auto;
-  object-fit: cover;
-  text-align: end;
-  margin-right: 30px;
-  margin-bottom: 30px;
   flex-grow: 2;
+  margin-right: 30px;
+  text-align: end;
+  padding-right: 25px;
 }
 
-.categories-content4-5 .categorie-pictures {
+.categories4-5 .item:nth-child(2) {
   background: url(../assets/img/image05_pictures.png);
-  width: auto;
-  object-fit: cover;
-  margin-bottom: 30px;
   flex-grow: 1;
-}
-
-.categories-content4-5 .categorie-pictures h2 {
-  margin: 30px 0 0 25px;
-}
-
-.categories-content4-5 .categorie-pictures p {
-  margin-left: 25px;
 }
 
 #growth-plans {
   background-color: var(--grey);
   width: 100%;
-  height: 817px;
+  height: 840px;
 }
 
-#growth-plans h2 {
-  font-size: 60px;
-  font-weight: 600;
-  color: var(--dark);
+#growth-plans .title h2 {
   padding: 100px 0 0 100px;
 }
 
-#growth-plans p {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--dark);
-  margin-left: 100px;
+#growth-plans .title p {
+  padding-left: 100px;
 }
 
 .plans {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  margin: 50px 100px 100px 100px;
 }
 
-.plans h3 {
+.title2 {
+  background-color: var(--dark-blue);
+  width: 165px;
+}
+
+.title2 h3 {
   color: var(--white);
   font-size: 32px;
   font-weight: 600;
-  margin: 10px 0 0 15px;
+  padding: 15px 0 0 15px;
 }
 
-#growth-plans .plans p {
+.title2 p {
+  background-color: var(--dark-blue);
   color: var(--white);
   font-size: 20px;
   font-weight: 600;
-  margin-left: 15px;
-  padding-bottom: 10px;
+  padding: 0 0 15px 15px;
 }
 
-.plans .description {
+.description {
+  width: 165px;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-bottom: 20px;
-  width: 15%;
 }
 
-#growth-plans .plans .description p {
+.description p {
+  background-color: var(--light-blue);
   color: var(--white);
   font-size: 12px;
   font-weight: 400;
-}
-
-.plans .plan-100 {
-  width: 165px;
-  height: 131px;
-  background-color: var(--dark-blue);
-  position: relative;
-  top: 255px;
-  margin-left: 100px;
-}
-
-.plans .plan-100 .description {
-  width: 165px;
-  height: 103px;
-  background-color: var(--light-blue);
-}
-
-.plans .plan-150 {
-  width: 165px;
-  height: 131px;
-  background-color: var(--dark-blue);
-  position: relative;
-  top: 204px;
-}
-
-.plans .plan-150 .description {
-  width: 165px;
-  height: 154px;
-  background-color: var(--light-blue);
-}
-
-.plans .plan-200 {
-  width: 165px;
-  height: 131px;
-  background-color: var(--dark-blue);
-  position: relative;
-  top: 153px;
-}
-
-.plans .plan-200 .description {
-  width: 165px;
-  height: 205px;
-  background-color: var(--light-blue);
-}
-
-.plans .plan-250 {
-  width: 165px;
-  height: 131px;
-  background-color: var(--dark-blue);
-  position: relative;
-  top: 102px;
-}
-
-.plans .plan-250 .description {
-  width: 165px;
-  height: 256px;
-  background-color: var(--light-blue);
-}
-
-.plans .plan-300 {
-  width: 165px;
-  height: 131px;
-  background-color: var(--dark-blue);
-  position: relative;
-  top: 51px;
-}
-
-.plans .plan-300 .description {
-  width: 165px;
-  height: 307px;
-  background-color: var(--light-blue);
-}
-
-.plans .plan-350 {
-  width: 165px;
-  height: 131px;
-  background-color: var(--dark-blue);
-  position: relative;
-  top: 0;
-  margin-right: 100px;
-}
-
-.plans .plan-350 .description {
-  width: 165px;
-  height: 358px;
-  background-color: var(--light-blue);
+  padding-left: 15px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 20px;
 } 
+
+.plan1 .description {
+  height: 103px;
+}
+
+.plan2 .description {
+  height: 154px;
+}
+
+.plan3 .description {
+  height: 205px;
+}
+
+.plan4 .description {
+  height: 256px;
+}
+
+.plan5 .description {
+  height: 307px;
+}
+
+.plan6 .description {
+  height: 358px;
+}
